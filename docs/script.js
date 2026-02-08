@@ -1,395 +1,494 @@
 const preguntas = [
     {
-        pregunta: "1. ¿Que funcion realiza la Unidad de Control dentro de la CPU?",
-        respuestas: [
-            "Lee las instrucciones y genera señales de control",
-            "Ejecuta instrucciones y almacena resultados",
-            "Lee datos y los convierte en señales eléctricas",
-            "Controla el acceso a la memoria principal"
-        ],
-        correcta: 0
-    },
+    pregunta: "1. Un caso de prueba representativo es…",
+    respuestas: [
+        "Un caso que detecta fallos sin probar todo",
+        "Un caso inválido al azar",
+        "El conjunto completo de entradas",
+        "Una prueba no documentada"
+    ],
+    correcta: 0
+},
 {
-        pregunta: "2. ¿Como trabaja la ALU para ejecutar operaciones?",
-        respuestas: [
-            "Realiza calculos y operaciones logicas",
-            "Interpreta instrucciones y gestiona el flujo de datos",
-            "Almacena datos y controla dispositivos externos",
-            "Ejecuta programas y gestiona la memoria"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "3. ¿Que papel cumple el banco de registros durante la ejecucion de instrucciones?",
-        respuestas: [
-            "Almacena datos temporalmente durante la ejecucion de instrucciones",
-            "Coordina el acceso a los buses de datos",
-            "Ejecuta operaciones lógicas y aritméticas",
-            "Controla el almacenamiento permanente de datos"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "4. ¿Que tipo de informacion almacena la memoria principal y por que es esencial para el funcionamiento del sistema?",
-        respuestas: [
-            "Almacena intrucciones y datos. Es esencial porque permite ejecutar programas y gestionar la informacion",
-            "Almacena archivos multimedia. Es esencial porque permite reproducir contenido sin interrupciones",
-            "Almacena datos gráficos. Es esencial porque mejora el rendimiento visual del sistema",
-            "Almacena configuraciones del sistema. Es esencial porque mantiene la estabilidad del equipo"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "5. ¿Que hacen los dispositivos de E/S?",
-        respuestas: [
-            "Permiten la comunicacion entre el equipo y el exterior",
-            "Ejecutan instrucciones del sistema operativo",
-            "Controlan el flujo de energía entre componentes",
-            "Almacenan datos en la memoria principal"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "6. ¿Que tipos de informacion transportan los buses?",
-        respuestas: [
-            "Transporta datos, direcciones y señales de control",
-            "Transporta instrucciones y resultados finales",
-            "Transmite energía y señales de audio",
-            "Gestiona el acceso a dispositivos externos"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "7. ¿Que es un programa?",
-        respuestas: [
-            "Conjunto de instrucciones almacenadas secuencialmente en memoria",
-            "Grupo de datos que se procesan automáticamente",
-            "Archivo que contiene imágenes y sonidos",
-            "Sistema que gestiona el hardware del equipo"
-        ],
-        correcta: 0
-    },
+    pregunta: "2. ¿Qué indica un ArrayIndexOutOfBoundsException?",
+    respuestas: [
+        "Se ha intentado acceder a una posición fuera del rango válido del array",
+        "El bucle for no tiene condición de salida",
+        "El método main no gestiona correctamente excepciones",
+        "El array contiene valores nulos"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "3. En análisis de valores límite se prueban…",
+    respuestas: [
+        "Valores aleatorios",
+        "Solo valores dentro del rango",
+        "Valores en los límites y fuera de ellos",
+        "Valores no numéricos"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "4. Detectar un defecto en pruebas es…",
+    respuestas: [
+        "Una razón para abandonar el proyecto",
+        "Un indicador de incompetencia",
+        "Un fracaso del equipo",
+        "Un éxito porque permite mejorar el software"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "5. Las particiones equivalentes buscan…",
+    respuestas: [
+        "Probar solo límites",
+        "Ignorar clases inválidas",
+        "Probar todos los valores",
+        "Reducir pruebas usando valores representativos"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "6. ¿Cuál es el propósito principal de un depurador?",
+    respuestas: [
+        "Optimizar automáticamente el código fuente",
+        "Compilar el programa con mayor eficiencia",
+        "Analizar el rendimiento del hardware",
+        "Ejecutar el programa de forma controlada para identificar y corregir errores"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "7. ¿Qué ocurre si se inicia el depurador sin puntos de interrupción?",
+    respuestas: [
+        "El programa se ejecuta normalmente sin detenerse",
+        "El depurador lanza un error",
+        "El programa se detiene al inicio automáticamente",
+        "El depurador fuerza un breakpoint inicial"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "8. Class Filter permite…",
+    respuestas: [
+        "Activar un breakpoint solo en una clase concreta",
+        "Analizar el tiempo de ejecución de cada clase",
+        "Modificar métodos comunes",
+        "Activar breakpoints en todas las clases"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "9. ¿Cuál es la función de un breakpoint?",
+    respuestas: [
+        "Detener la ejecución del programa en una línea específica",
+        "Compilar el código por partes",
+        "Optimizar rutas de ejecución",
+        "Eliminar errores automáticamente"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "10. Un watchpoint se activa cuando…",
+    respuestas: [
+        "Se lanza cualquier excepción",
+        "Se llama a un método estático",
+        "Se lee o modifica un atributo",
+        "Se ejecuta un bucle for"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "11. La complejidad ciclomática indica…",
+    respuestas: [
+        "El número de caminos independientes",
+        "La memoria utilizada",
+        "La cantidad de líneas",
+        "La profundidad de los bucles"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "12. ¿Para qué sirve un Instance Filter?",
+    respuestas: [
+        "Crear nuevas instancias del objeto",
+        "Optimizar uso de memoria",
+        "Detectar excepciones globales",
+        "Restringir un breakpoint a instancias específicas"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "13. La concentración de defectos implica que…",
+    respuestas: [
+        "No se deben revisar zonas ya testeadas",
+        "Si hay uno no puede haber más",
+        "Los fallos suelen agruparse en las mismas áreas",
+        "Los fallos siempre se distribuyen uniformemente"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "14. La validación confirma que…",
+    respuestas: [
+        "El software cumple requisitos del usuario",
+        "El código sigue estándares",
+        "Los módulos están aislados",
+        "La memoria se gestiona bien"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "15. La cobertura de condiciones verifica…",
+    respuestas: [
+        "Que todo el código compila",
+        "Que no existan rutas redundantes",
+        "Que todas las condiciones se evalúan a true y false",
+        "Que se ejecuten todos los bucles"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "16. La cobertura de rutas busca…",
+    respuestas: [
+        "Reducir el número de pruebas",
+        "Validar solo rutas críticas",
+        "Probar todas las combinaciones posibles de caminos",
+        "Medir complejidad temporal"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "17. ¿Qué técnica pertenece a caja blanca?",
+    respuestas: [
+        "Pruebas aleatorias",
+        "Análisis del camino básico",
+        "Valores límite",
+        "Particiones equivalentes"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "18. Step Over (F8) ejecuta…",
+    respuestas: [
+        "Desde el inicio del método",
+        "La siguiente línea sin entrar en métodos",
+        "Todo el bloque de una vez",
+        "La siguiente línea entrando en métodos"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "19. Las pruebas de caja negra se centran en…",
+    respuestas: [
+        "Estructura del código",
+        "Entradas y salidas según especificación",
+        "Control de memoria",
+        "Métricas de cobertura"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "20. Las pruebas de estrés buscan…",
+    respuestas: [
+        "Elevar la carga hasta fallo",
+        "Analizar usabilidad",
+        "Medir accesibilidad",
+        "Comprobar base de datos"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "21. NO es recomendación de Myers:",
+    respuestas: [
+        "Usar datos válidos e inválidos",
+        "Asumir defectos",
+        "Realizar pruebas sin documentación",
+        "Definir resultados esperados"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "22. Pass Count activa un breakpoint…",
+    respuestas: [
+        "Solo la primera vez que se ejecuta",
+        "Cuando la variable cambia de tipo",
+        "Tras alcanzarse un número determinado de veces",
+        "Solo cuando hay excepciones"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "23. Las pruebas de picos comprueban…",
+    respuestas: [
+        "Errores sintácticos",
+        "Optimización SQL",
+        "Variaciones súbitas de carga",
+        "Carga constante"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "24. “Evaluate and Log” permite…",
+    respuestas: [
+        "Registrar información sin detener el programa",
+        "Modificar el código fuente en caliente",
+        "Detener el programa siempre que se ejecute la línea",
+        "Ignorar completamente el breakpoint"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "25. Un método breakpoint se activa…",
+    respuestas: [
+        "Solo con excepciones",
+        "Al compilar",
+        "Cuando un método se sobrescribe",
+        "Al entrar o salir de un método indicado"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "26. La verificación se centra en…",
+    respuestas: [
+        "Ver si el usuario está satisfecho",
+        "Medir tiempos de respuesta",
+        "Comprobar que el software se construye correctamente según especificaciones",
+        "Probar solo la interfaz"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "27. Las pruebas de carga se centran en…",
+    respuestas: [
+        "Evaluar comportamiento bajo carga esperada",
+        "Verificar interfaz",
+        "Optimizar la CPU",
+        "Romper el sistema"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "28. Una prueba de unidad evalúa…",
+    respuestas: [
+        "Un módulo pequeño de código",
+        "La seguridad del servidor",
+        "Todo el sistema",
+        "La base de datos completa"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "29. Mute Breakpoints permite…",
+    respuestas: [
+        "Crear breakpoints automáticos",
+        "Desactivar temporalmente todos los breakpoints",
+        "Eliminarlos permanentemente",
+        "Reiniciar la depuración"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "30. Step Out sirve para…",
+    respuestas: [
+        "Detener el programa por completo",
+        "Ejecutar lentamente el método",
+        "Entrar en métodos privados",
+        "Salir del método actual y volver al llamador"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "31. Una prueba de integración verifica…",
+    respuestas: [
+        "El diseño del usuario",
+        "El funcionamiento conjunto de componentes",
+        "La interfaz gráfica",
+        "El rendimiento del hardware"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "32. ¿Qué prueba detecta mejor errores de lógica interna?",
+    respuestas: [
+        "Prueba funcional",
+        "Aleatoria",
+        "Prueba estructural",
+        "Picos"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "33. La prueba de sistema comprueba…",
+    respuestas: [
+        "Solo rendimiento",
+        "Partes aisladas",
+        "El funcionamiento completo del software",
+        "Seguridad exclusivamente"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "34. Las pruebas aleatorias buscan…",
+    respuestas: [
+        "Cubrir todas las rutas",
+        "Detectar errores en escenarios impredecibles",
+        "Medir rendimiento",
+        "Verificar requisitos"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "35. ¿Qué prueba detecta mejor errores respecto a requisitos?",
+    respuestas: [
+        "Pico",
+        "Caja blanca",
+        "Prueba funcional",
+        "Estrés"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "36. ¿Qué mide la cobertura de sentencias?",
+    respuestas: [
+        "La satisfacción del usuario",
+        "El rendimiento de cada módulo",
+        "La cantidad de excepciones",
+        "Si todas las líneas de código se ejecutan"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "37. La opción “Condition” en un breakpoint permite…",
+    respuestas: [
+        "Convertir el breakpoint en un watchpoint",
+        "Ignorar excepciones conocidas",
+        "Detener la ejecución solo si se cumple una condición",
+        "Ejecutar el código más rápido"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "38. Objetivo principal de la prueba de software:",
+    respuestas: [
+        "Optimizar el código automáticamente",
+        "Detectar defectos y verificar requisitos",
+        "Añadir funcionalidades",
+        "Sustituir al programador"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "39. Myers recomienda que…",
+    respuestas: [
+        "Solo haya pruebas automáticas",
+        "El programador no pruebe su propio código",
+        "Se pruebe al final del proyecto",
+        "Nunca usar datos inválidos"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "40. ¿Qué muestra la pila de llamadas?",
+    respuestas: [
+        "El flujo de métodos que han llevado al punto actual",
+        "Las variables globales del programa",
+        "Los errores no capturados",
+        "El uso de CPU por método"
+    ],
+    correcta: 0
+},
  {
-        pregunta: "8. ¿Como consigue el equipo recibir y procesar el audio?",
-        respuestas: [
-            "Convierte las ondas sonoras en señales electricas",
-            "Convierte señales eléctricas en datos visuales",
-            "Codifica imágenes en formato binario",
-            "Transforma datos en instrucciones para el sistema operativo"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "9. ¿Como consigue el equipo recibir y procesar el video?",
-        respuestas: [
-            "Convierte cada frame en pixeles codificados en binario para que el sistema los procese",
-            "Convierte cada píxel en señales eléctricas para el monitor",
-            "Almacena el vídeo directamente en la memoria ROM",
-            "Codifica el vídeo en formato hexadecimal para su reproducción"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "10. ¿Que funcion cumple el firmware dentro del hardware?",
-        respuestas: [
-            "Traducir ordenes externas para que el HW las ejecute",
-            "Ejecutar instrucciones del sistema operativo directamente",
-            "Controlar la velocidad de procesamiento de la CPU",
-            "Convertir señales eléctricas en datos binarios para la memoria"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "11. ¿Que tareas realiza el sistema operativo en un equipo informatico?",
-        respuestas: [
-            "Gestiona el HW, ejecuta programas y permite la interaccion con el usuario",
-            "Controla el flujo eléctrico, gestiona la refrigeración y activa el monitor",
-            "Ejecuta instrucciones de la BIOS y almacena datos en la ROM",
-            "Coordina la red, imprime documentos y apaga el sistema automáticamente"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "12. ¿Que necesita una aplicacion para poder ejecutarse correctamente?",
-        respuestas: [
-            "Requiere de un SO, espacio en disco duro, procesador y RAM",
-            "Necesita una tarjeta gráfica, conexión a internet y sistema de refrigeración",
-            "Requiere acceso al BIOS, batería externa y disco óptico",
-            "Solo necesita espacio en disco y una fuente de alimentación"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "13. ¿Que aspectos regula una licencia software?",
-        respuestas: [
-            "Numero de copias permitidas, derechos del usuario sobre el programa, responsabilidad del proveedor ante fallos",
-            "Condiciones de instalación, compatibilidad con el hardware y frecuencia de actualizaciones del sistema",
-            "Tipos de archivos que puede abrir, duración de la sesión y velocidad de ejecución del programa",
-            "Acceso a funciones avanzadas, soporte técnico incluido y requisitos mínimos de red para su uso"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "14. ¿Que diferencia hay entre licencia permisiva y no permisiva de codigo abierto?",
-        respuestas: [
-            "Permisiva: Se puede modificar y crear derivados sin tener la misma licencia | No Permisivas: La modificacion tienen que conservar la licencia original",
-            "Permisiva: Permite distribuir sin modificar | No permisiva: Solo permite uso personal sin distribución",
-            "Permisiva: La modificacion tienen que conservar la licencia original | No Permisivas: Se puede modificar y crear derivados sin tener la misma licencia",
-            "Permisiva: Se puede usar en cualquier sistema | No permisiva: Solo se permite en sistemas certificados"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "15. ¿Que ofrece el software libre al usuario?",
-        respuestas: [
-            "Permite ejecutar, copiar, modificar y distribuir sin restricciones",
-            "Permite usar el software solo en modo lectura",
-            "Permite modificar el hardware del equipo",
-            "Permite acceder al sistema operativo sin contraseña"
-        ],
-        correcta: 0
-    },
- {
-        pregunta: "16. ¿Que restricciones impone el software propietario al usuario?",
-        respuestas: [
-            "Limita el uso, copia, modificacion, redistribucion y sin acceso al codigo",
-            "Permite modificar el código y compartirlo libremente",
-            "Solo impide la instalación en sistemas antiguos",
-            "Limita el acceso a internet y al hardware externo"
-        ],
-        correcta: 0
-    },
+    pregunta: "41. La prueba exhaustiva es…",
+    respuestas: [
+        "Requerida por estándares",
+        "Obligatoria antes de entregar el software",
+        "Fácil de lograr con automatización",
+        "Impracticable incluso en programas pequeños"
+    ],
+    correcta: 3
+},
 {
-        pregunta: "17. ¿Que caracteristicas tienen el freeware, shareware y el software de dominio publico?",
-        respuestas: [
-            "Freeware: Gratuito, sin acceso al codigo y no modificable | Shareware: Version de prueba | Dominio publico: Sin restricciones",
-            "Freeware: Sin restricciones | Shareware: Gratuito, sin acceso al codigo y no modificable | Dominio público: Version de prueba",
-            "Freeware: Version de prueba | Shareware: Sin restricciones | Dominio público: Gratuito, sin acceso al codigo y no modificable",
-            "Freeware: Modificable | Shareware: Gratuito completo | Dominio público: Requiere registro"
-        ],
-        correcta: 0
-    },
+    pregunta: "42. Las pruebas de regresión sirven para…",
+    respuestas: [
+        "Medir producción",
+        "Detectar errores introducidos por cambios",
+        "Probar unidades",
+        "Validar solo nuevas funciones"
+    ],
+    correcta: 1
+},
 {
-        pregunta: "18. ¿Que modalidades de comercializacion existen para el software propietario?",
-        respuestas: [
-            "Retail, OEM, licencias por volumen",
-            "Libre, compartido, comunitario",
-            "Beta, Alfa, Gamma",
-            "Básico, avanzado, premium"
-        ],
-        correcta: 0
-    },
+    pregunta: "43. Las pruebas de estabilidad analizan…",
+    respuestas: [
+        "Si la aplicación rinde durante largos periodos",
+        "Calidad gráfica",
+        "Velocidad de compilación",
+        "Cumplimiento legal"
+    ],
+    correcta: 0
+},
 {
-        pregunta: "19. ¿Que beneficios ofrece el software libre?",
-        respuestas: [
-            "Mayor seguridad, rapida solucion de fallos, acceso al codigo fuente, instalacion ilimitada, economico",
-            "Menor coste, acceso limitado a funciones, posibilidad de compartir en redes locales, soporte parcial",
-            "Instalación sencilla, interfaz amigable, acceso a manuales, compatibilidad con periféricos básicos",
-            "Actualizaciones automáticas, uso sin conexión, control de usuarios, soporte en varios idiomas"
-        ],
-        correcta: 0
-    },
+    pregunta: "44. Step Into (F7) permite…",
+    respuestas: [
+        "Ejecutar el programa hasta el final",
+        "Ignorar métodos auxiliares",
+        "Detener solo en recursividad",
+        "Entrar dentro de un método llamado en esa línea"
+    ],
+    correcta: 3
+},
 {
-        pregunta: "20. ¿Que desventajas puede tener el software libre?",
-        respuestas: [
-            "Problemas con drivers, menor presencia en el mercado, mayor esfuerzo formativo, menor disponibilidad de juegos",
-            "Requiere conexión constante, no permite instalación en discos externos, interfaz poco personalizable",
-            "No incluye manuales, necesita licencia adicional, solo funciona en sistemas antiguos",
-            "Limitado a tareas básicas, sin acceso a redes, no compatible con formatos multimedia populares"
-        ],
-        correcta: 0
-    },
+    pregunta: "45. El modo “Remove once hit” hace que el breakpoint…",
+    respuestas: [
+        "No pueda desactivarse",
+        "Se elimine automáticamente tras activarse una vez",
+        "Se ejecute dos veces por ciclo",
+        "Se convierta en permanente"
+    ],
+    correcta: 1
+},
 {
-        pregunta: "21. ¿Que es el chasis para el equipo?",
-        respuestas: [
-            "Estructura que contiene todos los componentes",
-            "Compartimento que almacena los datos del sistema operativo",
-            "Dispositivo que regula la temperatura interna del equipo",
-            "Elemento que permite la conexión entre periféricos y el sistema"
-        ],
-        correcta: 0
-    },
+    pregunta: "46. “Disable until hitting the following breakpoint” se usa para…",
+    respuestas: [
+        "Ejecutar el programa sin depurar",
+        "Ignorar todos los breakpoints anteriores",
+        "Desactivar un breakpoint hasta alcanzar otro específico",
+        "Invertir el orden de los breakpoints"
+    ],
+    correcta: 2
+},
 {
-        pregunta: "22. ¿Que tarea realiza la fuente de alimentacion en el equipo?",
-        respuestas: [
-            "Convertir corriente alterna (externa) en corriente continua (interna)",
-            "Convertir corriente continua (externa) en corriente continua (interna)",
-            "Distribuir energía entre los dispositivos de entrada y salida",
-            "Controlar el flujo de datos entre el procesador y la memoria"
-        ],
-        correcta: 0
-    },
+    pregunta: "47. El camino básico requiere primero…",
+    respuestas: [
+        "Analizar el código",
+        "Consultar al cliente",
+        "Generar datos aleatorios",
+        "Dividir entradas en clases"
+    ],
+    correcta: 0
+},
 {
-        pregunta: "23. ¿Para que se utiliza la refrigeracion y que 2 tipos existen?",
-        respuestas: [
-            "Para evitar el sobrecalentamiento de componentes. Aire o liquida",
-            "Para mantener la velocidad del procesador. Interna o externa",
-            "Para enfriar la pantalla y el disco duro. Aire o liquida",
-            "Para reducir el ruido del sistema. Aire o liquida"
-        ],
-        correcta: 0
-    },
+    pregunta: "48. Caller Filter sirve para…",
+    respuestas: [
+        "Detectar fugas de memoria",
+        "Registrar accesos a variables estáticas",
+        "Restringir un breakpoint según el método que realiza la llamada",
+        "Controlar concurrencia"
+    ],
+    correcta: 2
+},
 {
-        pregunta: "24. ¿Que es la placa base?",
-        respuestas: [
-            "Es el componente donde se conectan el resto de componentes HW",
-            "Es el dispositivo que almacena los datos del sistema operativo",
-            "Es el sistema que controla la entrada y salida de datos",
-            "Es el componente que convierte señales eléctricas en imágenes"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "25. ¿Que funcion cumple la BIOS en el equipo?",
-        respuestas: [
-            "Se encarga de iniciar el HW y cargar el SO",
-            "Controla la velocidad del ventilador y la temperatura del procesador",
-            "Ejecuta las aplicaciones instaladas en el disco duro",
-            "Gestiona la conexión a internet y los periféricos externos"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "26. ¿Porque la BIOS utiliza una pila?",
-        respuestas: [
-            "Se utiliza para guardar la configuracion del sistema",
-            "Para alimentar el procesador durante el arranque",
-            "Para mantener encendida la pantalla cuando el equipo está apagado",
-            "Para almacenar archivos temporales del sistema operativo"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "27. ¿Que funcion tiene el microprocesador?",
-        respuestas: [
-            "Es el encargado de ejecutar instrucciones y coordinar el funcionamiento del sistema",
-            "Controla la energía que recibe cada componente y regula la temperatura",
-            "Almacena los datos del usuario y gestiona el disco duro",
-            "Se encarga de mostrar imágenes y sonidos en el monitor"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "28. ¿Que funcion cumple la memoria RAM?",
-        respuestas: [
-            "Almacenar temporalmente los datos en uso",
-            "Guardar permanentemente los archivos del sistema operativo",
-            "Procesar señales eléctricas para generar imágenes",
-            "Ejecutar instrucciones de la BIOS durante el arranque"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "29. ¿Que contiene la memoria ROM?",
-        respuestas: [
-            "Contiene datos esenciales para el arranque",
-            "Almacena archivos multimedia y documentos del usuario",
-            "Guarda datos temporales mientras se ejecutan programas",
-            "Procesa instrucciones del sistema operativo en tiempo real"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "30. ¿Que funcion tiene la memoria cache?",
-        respuestas: [
-            "Almacenar temporalmente datos e instrucciones y actuar de intermediario entre procesador y RAM",
-            "Almacenar permanentemente los programas instalados y enviarlos directamente al procesador cuando se necesiten",
-            "Gestionar la transferencia bancaria entre el disco duro y la memoria principal para acelerar el arranque del sistema",
-            "Almacenar permanentemente configuraciones del sistema y archivos de usuario"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "31. ¿Que tarea realiza una tarjeta grafica?",
-        respuestas: [
-            "Transformar datos en imagenes",
-            "Procesar instrucciones del sistema operativo para generar sonido",
-            "Convertir señales eléctricas en datos binarios para la memoria",
-            "Ejecutar programas y controlar el acceso a la red"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "32. ¿Como funciona un HDD de forma fisica y logica?",
-        respuestas: [
-            "Fisico: Usan platos y cabezales para leer y escribir datos | Logico: Organiza datos en sectores y pistas",
-            "Fisico: Organiza datos en sectores y pistas | Logico: Usan platos y cabezales para leer y escribir datos",
-            "Físico: Usa ventiladores para mover los datos | Lógico: Agrupa los archivos por tipo y tamaño",
-            "Físico: Utiliza láseres para grabar datos | Lógico: Divide la información en bloques de memoria RAM"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "33. ¿Como funcionan los dispositivos de almacenamiento optico?",
-        respuestas: [
-            "Utilizan un laser para leer/escribir guardando la informacion en pits y lands",
-            "Usan cabezales magnéticos para grabar datos en discos duros",
-            "Emplean corriente eléctrica para almacenar datos en módulos de RAM",
-            "Utilizan sensores de calor para modificar la superficie del disco"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "34. ¿Que supone cambiar el color del laser?",
-        respuestas: [
-            "Afecta a la capcidad de lectura y escritura del dispositivo",
-            "Mejora la velocidad de conexión entre periféricos y el sistema operativo",
-            "Permite almacenar datos en formato binario directamente en la memoria RAM",
-            "Cambia la resolución de imagen en pantallas conectadas al equipo"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "35. ¿Que elemento permite que los perifericos se comuniquen con el SO?",
-        respuestas: [
-            "Drivers",
-            "BIOS",
-            "Tarjeta gráfica",
-            "Fuente de alimentación"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "36. ¿Que es el direccionamiento inmmediato?",
-        respuestas: [
-            "El dato esta directamente en la instruccion",
-            "La instruccion contiene la direccion exacta del dato",
-            "Contiene una direccion que apunta a otra donde esta el dato",
-            "Es la direccion efectiva que se obtiene sumando un valo fijo a una base"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "37. ¿Que es el direccionamiento directo?",
-        respuestas: [
-            "La instruccion contiene la direccion exacta del dato",
-            "El dato esta directamente en la instruccion",
-            "Contiene una direccion que apunta a otra donde esta el dato",
-            "Es la direccion efectiva que se obtiene sumando un valo fijo a una base"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "38. ¿Que es el direccionamiento indirecto?",
-        respuestas: [
-            "Contiene una direccion que apunta a otra donde esta el dato",
-            "El dato esta directamente en la instruccion",
-            "La instruccion contiene la direccion exacta del dato",
-            "Es la direccion efectiva que se obtiene sumando un valo fijo a una base"
-        ],
-        correcta: 0
-    },
-{
-        pregunta: "39. ¿Que es el direccionamiento relativo?",
-        respuestas: [
-            "Es la direccion efectiva que se obtiene sumando un valo fijo a una base",
-            "El dato esta directamente en la instruccion",
-            "La instruccion contiene la direccion exacta del dato",
-            "Contiene una direccion que apunta a otra donde esta el dato"
-        ],
-        correcta: 0
-    },
-
+    pregunta: "49. “No se demuestra ausencia de errores” implica…",
+    respuestas: [
+        "Los errores son inevitables",
+        "Las pruebas siempre fallan",
+        "Probar no sirve",
+        "Aun sin fallos, pueden existir errores"
+    ],
+    correcta: 3
+}   
 ];
 
 // Función para barajar un array
@@ -496,3 +595,4 @@ function siguientePregunta() {
 window.onload = function() {
     mostrarPregunta();
 };
+
