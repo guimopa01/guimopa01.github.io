@@ -1,494 +1,607 @@
 const preguntas = [
-    {
-    pregunta: "1. Un caso de prueba representativo es…",
+  {
+    pregunta: "1. ¿Cuál hace que el contenido sea más grande?\n\n*{\n  box-sizing: border-box;\n}\n\n.modificar1{\n  box-sizing: border-box;\n}\n\n.modificar2{\n  box-sizing: content-box;\n}"
+,
     respuestas: [
-        "Un caso que detecta fallos sin probar todo",
-        "Un caso inválido al azar",
-        "El conjunto completo de entradas",
-        "Una prueba no documentada"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "2. ¿Qué indica un ArrayIndexOutOfBoundsException?",
-    respuestas: [
-        "Se ha intentado acceder a una posición fuera del rango válido del array",
-        "El bucle for no tiene condición de salida",
-        "El método main no gestiona correctamente excepciones",
-        "El array contiene valores nulos"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "3. En análisis de valores límite se prueban…",
-    respuestas: [
-        "Valores aleatorios",
-        "Solo valores dentro del rango",
-        "Valores en los límites y fuera de ellos",
-        "Valores no numéricos"
+      "*{ box-sizing: border-box; }",
+      ".modificar1{ box-sizing: border-box; }",
+      ".modificar2{ box-sizing: content-box; }",
+      "Ninguna, todas ocupan lo mismo"
     ],
     correcta: 2
-},
-{
-    pregunta: "4. Detectar un defecto en pruebas es…",
+  },
+
+  {
+    pregunta: "2. ¿Qué selector aplica el estilo a todos los párrafos de la página?",
     respuestas: [
-        "Una razón para abandonar el proyecto",
-        "Un indicador de incompetencia",
-        "Un fracaso del equipo",
-        "Un éxito porque permite mejorar el software"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "5. Las particiones equivalentes buscan…",
-    respuestas: [
-        "Probar solo límites",
-        "Ignorar clases inválidas",
-        "Probar todos los valores",
-        "Reducir pruebas usando valores representativos"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "6. ¿Cuál es el propósito principal de un depurador?",
-    respuestas: [
-        "Optimizar automáticamente el código fuente",
-        "Compilar el programa con mayor eficiencia",
-        "Analizar el rendimiento del hardware",
-        "Ejecutar el programa de forma controlada para identificar y corregir errores"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "7. ¿Qué ocurre si se inicia el depurador sin puntos de interrupción?",
-    respuestas: [
-        "El programa se ejecuta normalmente sin detenerse",
-        "El depurador lanza un error",
-        "El programa se detiene al inicio automáticamente",
-        "El depurador fuerza un breakpoint inicial"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "8. Class Filter permite…",
-    respuestas: [
-        "Activar un breakpoint solo en una clase concreta",
-        "Analizar el tiempo de ejecución de cada clase",
-        "Modificar métodos comunes",
-        "Activar breakpoints en todas las clases"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "9. ¿Cuál es la función de un breakpoint?",
-    respuestas: [
-        "Detener la ejecución del programa en una línea específica",
-        "Compilar el código por partes",
-        "Optimizar rutas de ejecución",
-        "Eliminar errores automáticamente"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "10. Un watchpoint se activa cuando…",
-    respuestas: [
-        "Se lanza cualquier excepción",
-        "Se llama a un método estático",
-        "Se lee o modifica un atributo",
-        "Se ejecuta un bucle for"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "11. La complejidad ciclomática indica…",
-    respuestas: [
-        "El número de caminos independientes",
-        "La memoria utilizada",
-        "La cantidad de líneas",
-        "La profundidad de los bucles"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "12. ¿Para qué sirve un Instance Filter?",
-    respuestas: [
-        "Crear nuevas instancias del objeto",
-        "Optimizar uso de memoria",
-        "Detectar excepciones globales",
-        "Restringir un breakpoint a instancias específicas"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "13. La concentración de defectos implica que…",
-    respuestas: [
-        "No se deben revisar zonas ya testeadas",
-        "Si hay uno no puede haber más",
-        "Los fallos suelen agruparse en las mismas áreas",
-        "Los fallos siempre se distribuyen uniformemente"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "14. La validación confirma que…",
-    respuestas: [
-        "El software cumple requisitos del usuario",
-        "El código sigue estándares",
-        "Los módulos están aislados",
-        "La memoria se gestiona bien"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "15. La cobertura de condiciones verifica…",
-    respuestas: [
-        "Que todo el código compila",
-        "Que no existan rutas redundantes",
-        "Que todas las condiciones se evalúan a true y false",
-        "Que se ejecuten todos los bucles"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "16. La cobertura de rutas busca…",
-    respuestas: [
-        "Reducir el número de pruebas",
-        "Validar solo rutas críticas",
-        "Probar todas las combinaciones posibles de caminos",
-        "Medir complejidad temporal"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "17. ¿Qué técnica pertenece a caja blanca?",
-    respuestas: [
-        "Pruebas aleatorias",
-        "Análisis del camino básico",
-        "Valores límite",
-        "Particiones equivalentes"
+      "Selector de clase",
+      "Selector de tipo",
+      "Selector de id",
+      "Selector universal"
     ],
     correcta: 1
-},
-{
-    pregunta: "18. Step Over (F8) ejecuta…",
+  },
+
+  {
+    pregunta: "3. ¿Qué selector se usa para aplicar estilo a todos los elementos de la página?",
     respuestas: [
-        "Desde el inicio del método",
-        "La siguiente línea sin entrar en métodos",
-        "Todo el bloque de una vez",
-        "La siguiente línea entrando en métodos"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "19. Las pruebas de caja negra se centran en…",
-    respuestas: [
-        "Estructura del código",
-        "Entradas y salidas según especificación",
-        "Control de memoria",
-        "Métricas de cobertura"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "20. Las pruebas de estrés buscan…",
-    respuestas: [
-        "Elevar la carga hasta fallo",
-        "Analizar usabilidad",
-        "Medir accesibilidad",
-        "Comprobar base de datos"
+      "Selector universal",
+      "Selector de tipo",
+      "Selector de clase",
+      "Selector descendiente"
     ],
     correcta: 0
-},
-{
-    pregunta: "21. NO es recomendación de Myers:",
+  },
+
+  {
+    pregunta: "4. ¿Qué selector se usa para aplicar estilo a un único elemento con un identificador concreto?",
     respuestas: [
-        "Usar datos válidos e inválidos",
-        "Asumir defectos",
-        "Realizar pruebas sin documentación",
-        "Definir resultados esperados"
+      "Selector de clase",
+      "Selector de id",
+      "Selector de tipo",
+      "Selector de atributo"
+    ],
+    correcta: 1
+  },
+
+  {
+   pregunta: "5. ¿Qué opción describe mejor el uso de class en este ejemplo?\n\n<p class=\"alerta advertencia-roja\">Peligro, esta acción no se puede deshacer.</p>\n\n.alerta {\n  border: 2px solid red;\n}\n\n.advertencia-roja {\n  color: red;\n}"
+,
+    respuestas: [
+      "Un elemento solo puede tener una clase",
+      "Un elemento puede tener varias clases separadas por espacios",
+      "Las clases solo se pueden usar en <p>",
+      "Las clases deben ser únicas en todo el documento"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "6. ¿Qué selector aplica estilo solo a los enlaces dentro de un li?",
+    respuestas: [
+      "Selector de hijo directo",
+      "Selector descendiente",
+      "Selector de id",
+      "Selector de clase"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "7. ¿Qué selector selecciona solo los li que son hijos directos de un ul?",
+    respuestas: [
+      "ul li",
+      "ul + li",
+      "ul > li",
+      "ul ~ li"
     ],
     correcta: 2
-},
-{
-    pregunta: "22. Pass Count activa un breakpoint…",
+  },
+
+  {
+    pregunta: "8. ¿Qué pseudo-clase se aplica cuando el ratón pasa por encima de un párrafo?",
     respuestas: [
-        "Solo la primera vez que se ejecuta",
-        "Cuando la variable cambia de tipo",
-        "Tras alcanzarse un número determinado de veces",
-        "Solo cuando hay excepciones"
+      ":active",
+      ":visited",
+      ":hover",
+      ":focus"
     ],
     correcta: 2
-},
-{
-    pregunta: "23. Las pruebas de picos comprueban…",
+  },
+
+  {
+    pregunta: "9. ¿Qué pseudo-clase selecciona el primer párrafo dentro de su contenedor?",
     respuestas: [
-        "Errores sintácticos",
-        "Optimización SQL",
-        "Variaciones súbitas de carga",
-        "Carga constante"
+      ":first-child",
+      ":first-of-type",
+      ":nth-child(1)",
+      ":only-child"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "10. ¿Qué propiedad controla el espacio entre líneas de texto?",
+    respuestas: [
+      "letter-spacing",
+      "line-height",
+      "text-spacing",
+      "text-height"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "11. ¿Qué propiedad elimina el subrayado de los enlaces?",
+    respuestas: [
+      "text-style",
+      "decoration",
+      "text-decoration",
+      "underline:none"
     ],
     correcta: 2
-},
-{
-    pregunta: "24. “Evaluate and Log” permite…",
+  },
+
+  {
+    pregunta: "12. ¿Qué propiedad define el color de fondo de un elemento?",
     respuestas: [
-        "Registrar información sin detener el programa",
-        "Modificar el código fuente en caliente",
-        "Detener el programa siempre que se ejecute la línea",
-        "Ignorar completamente el breakpoint"
+      "color",
+      "background",
+      "background-color",
+      "bg-color"
     ],
-    correcta: 0
-},
-{
-    pregunta: "25. Un método breakpoint se activa…",
+    correcta: 2
+  },
+
+  {
+    pregunta: "13. ¿Qué hace background-image?",
     respuestas: [
-        "Solo con excepciones",
-        "Al compilar",
-        "Cuando un método se sobrescribe",
-        "Al entrar o salir de un método indicado"
+      "Cambia el color del fondo de la imagen",
+      "Coloca una imagen como fondo del elemento",
+      "Inserta una imagen dentro del contenido",
+      "Cambia el borde del elemento"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "14. ¿Qué hace background-size en este ejemplo?\n\n.imagen-cover {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}"
+,
+    respuestas: [
+      "Ajusta la imagen para que se vea completa aunque queden huecos",
+      "Repite la imagen hasta llenar el contenedor",
+      "Escala la imagen para cubrir todo el contenedor aunque se recorte",
+      "Centra la imagen sin cambiar su tamaño"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "15. ¿Qué hace background-size en este ejemplo?\n\n.imagen-contain {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-size: contain;\n}"
+,
+    respuestas: [
+      "La imagen cubre todo el contenedor aunque se recorte",
+      "La imagen se escala para ser completamente visible, aunque queden espacios vacíos",
+      "La imagen se repite en mosaico",
+      "La imagen se estira sin mantener proporciones"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "16. ¿Qué hace background-position aquí?\n\n.imagen-posicion {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-position: center;\n}"
+,
+    respuestas: [
+      "Coloca la imagen en la esquina superior izquierda",
+      "Centra la imagen horizontal y verticalmente",
+      "Repite la imagen en el centro",
+      "Mueve la imagen al fondo de la página"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "17. ¿Qué propiedad controla el grosor, estilo y color del borde en una sola línea?",
+    respuestas: [
+      "border-style",
+      "border-width",
+      "border-color",
+      "border"
     ],
     correcta: 3
-},
-{
-    pregunta: "26. La verificación se centra en…",
+  },
+
+  {
+    pregunta: "18. ¿Qué propiedad redondea las esquinas de una caja?",
     respuestas: [
-        "Ver si el usuario está satisfecho",
-        "Medir tiempos de respuesta",
-        "Comprobar que el software se construye correctamente según especificaciones",
-        "Probar solo la interfaz"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "27. Las pruebas de carga se centran en…",
-    respuestas: [
-        "Evaluar comportamiento bajo carga esperada",
-        "Verificar interfaz",
-        "Optimizar la CPU",
-        "Romper el sistema"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "28. Una prueba de unidad evalúa…",
-    respuestas: [
-        "Un módulo pequeño de código",
-        "La seguridad del servidor",
-        "Todo el sistema",
-        "La base de datos completa"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "29. Mute Breakpoints permite…",
-    respuestas: [
-        "Crear breakpoints automáticos",
-        "Desactivar temporalmente todos los breakpoints",
-        "Eliminarlos permanentemente",
-        "Reiniciar la depuración"
+      "border-round",
+      "border-radius",
+      "corner-radius",
+      "round-corners"
     ],
     correcta: 1
-},
-{
-    pregunta: "30. Step Out sirve para…",
+  },
+
+  {
+    pregunta: "19. ¿Qué unidad es relativa al tamaño de fuente del elemento raíz (html)?",
     respuestas: [
-        "Detener el programa por completo",
-        "Ejecutar lentamente el método",
-        "Entrar en métodos privados",
-        "Salir del método actual y volver al llamador"
+      "em",
+      "rem",
+      "px",
+      "%"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "20. ¿Qué unidad representa un porcentaje del ancho de la ventana del navegador?",
+    respuestas: [
+      "vh",
+      "vw",
+      "%",
+      "vmin"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "21. ¿Qué valor de display hace que un elemento ocupe todo el ancho disponible y empiece en una nueva línea?",
+    respuestas: [
+      "inline",
+      "block",
+      "inline-block",
+      "flex"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "22. ¿Qué valor de display hace que el elemento fluya con el texto y no acepte width ni height?",
+    respuestas: [
+      "block",
+      "inline",
+      "flex",
+      "grid"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "23. ¿Qué valor de position es el valor por defecto (no se saca del flujo normal)?",
+    respuestas: [
+      "relative",
+      "absolute",
+      "fixed",
+      "static"
     ],
     correcta: 3
-},
-{
-    pregunta: "31. Una prueba de integración verifica…",
+  },
+
+  {
+    pregunta: "24. ¿Qué hace position: fixed?",
     respuestas: [
-        "El diseño del usuario",
-        "El funcionamiento conjunto de componentes",
-        "La interfaz gráfica",
-        "El rendimiento del hardware"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "32. ¿Qué prueba detecta mejor errores de lógica interna?",
-    respuestas: [
-        "Prueba funcional",
-        "Aleatoria",
-        "Prueba estructural",
-        "Picos"
+      "Se mueve con el scroll",
+      "Se posiciona respecto a su contenedor padre",
+      "Se queda fija respecto a la ventana, aunque hagas scroll",
+      "Desaparece del flujo y no se ve"
     ],
     correcta: 2
-},
-{
-    pregunta: "33. La prueba de sistema comprueba…",
+  },
+
+  {
+    pregunta: "25. ¿Qué propiedad activa Flexbox en un contenedor?",
     respuestas: [
-        "Solo rendimiento",
-        "Partes aisladas",
-        "El funcionamiento completo del software",
-        "Seguridad exclusivamente"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "34. Las pruebas aleatorias buscan…",
-    respuestas: [
-        "Cubrir todas las rutas",
-        "Detectar errores en escenarios impredecibles",
-        "Medir rendimiento",
-        "Verificar requisitos"
+      "flex-direction",
+      "display:flex",
+      "flex:1",
+      "justify-content"
     ],
     correcta: 1
-},
-{
-    pregunta: "35. ¿Qué prueba detecta mejor errores respecto a requisitos?",
+  },
+
+  {
+    pregunta: "26. ¿Qué hace justify-content: center?",
     respuestas: [
-        "Pico",
-        "Caja blanca",
-        "Prueba funcional",
-        "Estrés"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "36. ¿Qué mide la cobertura de sentencias?",
-    respuestas: [
-        "La satisfacción del usuario",
-        "El rendimiento de cada módulo",
-        "La cantidad de excepciones",
-        "Si todas las líneas de código se ejecutan"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "37. La opción “Condition” en un breakpoint permite…",
-    respuestas: [
-        "Convertir el breakpoint en un watchpoint",
-        "Ignorar excepciones conocidas",
-        "Detener la ejecución solo si se cumple una condición",
-        "Ejecutar el código más rápido"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "38. Objetivo principal de la prueba de software:",
-    respuestas: [
-        "Optimizar el código automáticamente",
-        "Detectar defectos y verificar requisitos",
-        "Añadir funcionalidades",
-        "Sustituir al programador"
+      "Centra los items verticalmente",
+      "Centra los items horizontalmente en el eje principal",
+      "Los pega a la izquierda",
+      "Los reparte con espacio entre ellos y los extremos"
     ],
     correcta: 1
-},
-{
-    pregunta: "39. Myers recomienda que…",
+  },
+
+  {
+    pregunta: "27. ¿Qué hace align-items: center?",
     respuestas: [
-        "Solo haya pruebas automáticas",
-        "El programador no pruebe su propio código",
-        "Se pruebe al final del proyecto",
-        "Nunca usar datos inválidos"
+      "Alinea los items en el eje principal",
+      "Alinea los items en el eje cruzado (vertical por defecto)",
+      "Los distribuye con espacio entre ellos",
+      "Los manda al final del contenedor"
     ],
     correcta: 1
-},
-{
-    pregunta: "40. ¿Qué muestra la pila de llamadas?",
+  },
+
+  {
+    pregunta: "28. En este ejemplo de box model, ¿qué propiedad define el espacio entre el contenido y el borde?\n\n.caja {\n  padding: 20px;\n  border: 1px solid #ccc;\n  margin: 10px;\n  gap: 20px;\n}"
+,
     respuestas: [
-        "El flujo de métodos que han llevado al punto actual",
-        "Las variables globales del programa",
-        "Los errores no capturados",
-        "El uso de CPU por método"
+      "margin",
+      "padding",
+      "border",
+      "gap"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "29. En este ejemplo, ¿qué propiedad define el espacio entre la caja y otros elementos?\n\n.caja {\n  padding: 20px;\n  border: 1px solid #ccc;\n  margin: 10px;\n}"
+,
+    respuestas: [
+      "margin",
+      "padding",
+      "border",
+      "outline"
     ],
     correcta: 0
-},
- {
-    pregunta: "41. La prueba exhaustiva es…",
+  },
+
+  {
+    pregunta: "30. ¿Qué forma de conectar CSS con HTML se está usando aquí?\n\n<head>\n  <link rel=\"stylesheet\" href=\"estilos.css\">\n</head>"
+,
     respuestas: [
-        "Requerida por estándares",
-        "Obligatoria antes de entregar el software",
-        "Fácil de lograr con automatización",
-        "Impracticable incluso en programas pequeños"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "42. Las pruebas de regresión sirven para…",
-    respuestas: [
-        "Medir producción",
-        "Detectar errores introducidos por cambios",
-        "Probar unidades",
-        "Validar solo nuevas funciones"
+      "CSS interno",
+      "CSS externo",
+      "CSS en línea",
+      "CSS incrustado en el body"
     ],
     correcta: 1
-},
-{
-    pregunta: "43. Las pruebas de estabilidad analizan…",
+  },
+
+  {
+    pregunta: "31. ¿Qué forma de conectar CSS con HTML se usa en este ejemplo?\n\n<head>\n  <style>\n    p { color: blue; }\n  </style>\n</head>"
+,
     respuestas: [
-        "Si la aplicación rinde durante largos periodos",
-        "Calidad gráfica",
-        "Velocidad de compilación",
-        "Cumplimiento legal"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "44. Step Into (F7) permite…",
-    respuestas: [
-        "Ejecutar el programa hasta el final",
-        "Ignorar métodos auxiliares",
-        "Detener solo en recursividad",
-        "Entrar dentro de un método llamado en esa línea"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "45. El modo “Remove once hit” hace que el breakpoint…",
-    respuestas: [
-        "No pueda desactivarse",
-        "Se elimine automáticamente tras activarse una vez",
-        "Se ejecute dos veces por ciclo",
-        "Se convierta en permanente"
+      "CSS externo",
+      "CSS interno",
+      "CSS en línea",
+      "CSS global"
     ],
     correcta: 1
-},
-{
-    pregunta: "46. “Disable until hitting the following breakpoint” se usa para…",
+  },
+
+  {
+    pregunta: "32. ¿Qué tipo de CSS se aplica aquí?\n\n<p style=\"font-size: 20px; color: red;\">Hola</p>"
+,
     respuestas: [
-        "Ejecutar el programa sin depurar",
-        "Ignorar todos los breakpoints anteriores",
-        "Desactivar un breakpoint hasta alcanzar otro específico",
-        "Invertir el orden de los breakpoints"
+      "CSS interno",
+      "CSS externo",
+      "CSS en línea",
+      "CSS universal"
     ],
     correcta: 2
-},
-{
-    pregunta: "47. El camino básico requiere primero…",
+  },
+
+  {
+    pregunta: "33. ¿Qué selector selecciona SOLO el primer hijo de un contenedor?",
     respuestas: [
-        "Analizar el código",
-        "Consultar al cliente",
-        "Generar datos aleatorios",
-        "Dividir entradas en clases"
+      ":first-of-type",
+      ":first-child",
+      ":nth-child(1)",
+      ":only-child"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "34. ¿Qué selector selecciona SOLO el último párrafo dentro de un div?",
+    respuestas: [
+      "p:last-of-type",
+      "p:last-child",
+      "p:nth-last(1)",
+      "p:end"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "35. ¿Qué selector selecciona los párrafos pares?",
+    respuestas: [
+      "p:nth-child(even)",
+      "p:nth-child(odd)",
+      "p:first-child",
+      "p:last-child"
     ],
     correcta: 0
-},
-{
-    pregunta: "48. Caller Filter sirve para…",
+  },
+
+  {
+    pregunta: "36. ¿Qué selector selecciona los párrafos impares?",
     respuestas: [
-        "Detectar fugas de memoria",
-        "Registrar accesos a variables estáticas",
-        "Restringir un breakpoint según el método que realiza la llamada",
-        "Controlar concurrencia"
+      "p:nth-child(even)",
+      "p:nth-child(odd)",
+      "p:first-child",
+      "p:last-child"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "37. ¿Qué pseudo‑clase se activa cuando un checkbox está marcado?",
+    respuestas: [
+      ":active",
+      ":focus",
+      ":checked",
+      ":selected"
     ],
     correcta: 2
-},
-{
-    pregunta: "49. “No se demuestra ausencia de errores” implica…",
+  },
+
+  {
+    pregunta: "38. ¿Qué selector selecciona el primer párrafo del tipo <p> aunque no sea el primer hijo?",
     respuestas: [
-        "Los errores son inevitables",
-        "Las pruebas siempre fallan",
-        "Probar no sirve",
-        "Aun sin fallos, pueden existir errores"
+      ":first-child",
+      ":first-of-type",
+      ":nth-child(1)",
+      ":only-of-type"
     ],
-    correcta: 3
-}   
+    correcta: 1
+  },
+
+  {
+    pregunta: "39. ¿Qué unidad depende del tamaño de fuente del elemento padre?",
+    respuestas: [
+      "px",
+      "rem",
+      "em",
+      "vh"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "40. ¿Qué unidad ocupa un porcentaje del alto de la ventana?",
+    respuestas: [
+      "vw",
+      "vh",
+      "vmin",
+      "vmax"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "41. ¿Qué unidad usa el lado más corto del viewport?",
+    respuestas: [
+      "vmax",
+      "vmin",
+      "vh",
+      "vw"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "42. ¿Qué unidad usa el lado más largo del viewport?",
+    respuestas: [
+      "vmin",
+      "vmax",
+      "vh",
+      "vw"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "43. ¿Qué valor de display oculta completamente un elemento?",
+    respuestas: [
+      "block",
+      "inline",
+      "none",
+      "hidden"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "44. ¿Qué valor de display permite aplicar width y height pero se comporta como inline?",
+    respuestas: [
+      "inline",
+      "block",
+      "inline-block",
+      "flex"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "45. ¿Qué propiedad define la dirección de los elementos en flexbox?",
+    respuestas: [
+      "justify-content",
+      "align-items",
+      "flex-direction",
+      "flex-wrap"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "46. ¿Qué propiedad permite que los elementos flex salten a otra línea?",
+    respuestas: [
+      "wrap-items",
+      "flex-wrap",
+      "wrap-content",
+      "flex-direction"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "47. ¿Qué propiedad controla el espacio entre los elementos flex?",
+    respuestas: [
+      "margin",
+      "padding",
+      "gap",
+      "spacing"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "48. ¿Qué valor de position se pega arriba al hacer scroll?",
+    respuestas: [
+      "fixed",
+      "sticky",
+      "absolute",
+      "relative"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "49. ¿Qué valor de position se posiciona respecto al padre posicionado?",
+    respuestas: [
+      "static",
+      "absolute",
+      "fixed",
+      "sticky"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "50. ¿Qué valor de position se mueve respecto a su posición original?",
+    respuestas: [
+      "static",
+      "relative",
+      "absolute",
+      "fixed"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "51. ¿Qué propiedad añade sombra a una tarjeta?",
+    respuestas: [
+      "shadow",
+      "border-shadow",
+      "box-shadow",
+      "drop-shadow"
+    ],
+    correcta: 2
+  },
+
+  {
+    pregunta: "52. ¿Qué propiedad define un borde decorativo en la izquierda?",
+    respuestas: [
+      "left-border",
+      "border-left",
+      "border-side",
+      "border-start"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "53. ¿Qué propiedad define el espacio interior de un elemento?",
+    respuestas: [
+      "margin",
+      "padding",
+      "border",
+      "gap"
+    ],
+    correcta: 1
+  },
+
+  {
+    pregunta: "54. ¿Qué propiedad define el espacio exterior de un elemento?",
+    respuestas: [
+      "padding",
+      "border",
+      "margin",
+      "outline"
+    ],
+    correcta: 2
+  }
 ];
 
 // Función para barajar un array
@@ -595,4 +708,5 @@ function siguientePregunta() {
 window.onload = function() {
     mostrarPregunta();
 };
+
 
