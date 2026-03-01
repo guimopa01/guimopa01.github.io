@@ -19,7 +19,7 @@ const preguntas = [
       "Selector de id",
       "Selector universal"
     ],
-    correcta: 0
+    correcta: 1
   },
 
   {
@@ -708,6 +708,7 @@ function siguientePregunta() {
 window.onload = function() {
     mostrarPregunta();
 };
+
 
 
 
