@@ -1,606 +1,993 @@
 const preguntas = [
   {
-    pregunta: "1. ¿Cuál hace que el contenido sea más grande?\n\n*{\n  box-sizing: border-box;\n}\n\n.modificar1{\n  box-sizing: border-box;\n}\n\n.modificar2{\n  box-sizing: content-box;\n}"
-,
+    pregunta: "1. ¿Qué es Git?",
     respuestas: [
-      "*{ box-sizing: border-box; }",
-      ".modificar1{ box-sizing: border-box; }",
-      ".modificar2{ box-sizing: content-box; }",
-      "Ninguna, todas ocupan lo mismo"
-    ],
-    correcta: 2
-  },
-
-  {
-    pregunta: "2. ¿Qué selector aplica el estilo a todos los párrafos de la página?",
-    respuestas: [
-      "Selector de clase",
-      "Selector de tipo",
-      "Selector de id",
-      "Selector universal"
+      "Un editor de texto para programadores",
+      "Un sistema de control de versiones para gestionar cambios en proyectos",
+      "Una nube para guardar archivos",
+      "Un lenguaje de programación"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "3. ¿Qué selector se usa para aplicar estilo a todos los elementos de la página?",
+    pregunta: "2. ¿Qué es GitHub?",
     respuestas: [
-      "Selector universal",
-      "Selector de tipo",
-      "Selector de clase",
-      "Selector descendiente"
+      "Un programa para hacer commits",
+      "Una plataforma online para alojar repositorios Git y colaborar",
+      "Un comando para sincronizar ramas",
+      "Un sistema operativo para desarrolladores"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "3. Creas una carpeta nueva, ejecutas git init y luego miras dentro. ¿Qué deberías ver?(GIT)",
+    respuestas: [
+      "Un archivo llamado commits.txt",
+      "Una carpeta oculta .git/",
+      "Un archivo README generado automáticamente",
+      "Nada nuevo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "4. Tienes un archivo nuevo que nunca has añadido. Al hacer git status, ¿cómo aparecerá?(GIT)",
+    respuestas: [
+      "Como staged",
+      "Como committed",
+      "Como untracked",
+      "Como merged"
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "5. Tienes un archivo modificado pero NO lo has añadido. ¿Qué mostrará git status?(GIT)",
+    respuestas: [
+      "Que está en staging",
+      "Que está modified",
+      "Que está eliminado",
+      "Que está en conflicto"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "6. Guardas cambios en un archivo y ejecutas git diff. ¿Qué deberías ver?(GIT)",
+    respuestas: [
+      "Un mensaje de error",
+      "Un resumen sin detalles",
+      "Un listado de líneas añadidas y eliminadas",
+      "Solo los nombres de los archivos"
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "7. Si haces git add a un archivo y luego git status, ¿en qué estado aparecerá?(GIT)",
+    respuestas: [
+      "Untracked",
+      "Modified",
+      "Staged",
+      "Deleted"
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "8. Haces git commit sin haber añadido nada antes. ¿Qué ocurre?(GIT)",
+    respuestas: [
+      "Se guarda todo el proyecto",
+      "Se guardan solo los archivos modificados",
+      "No se guarda nada porque no hay nada en staging",
+      "Se borra el historial"
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "9. Ejecutas git log en tu repositorio. ¿Qué información deberías ver en pantalla?(GIT)",
+    respuestas: [
+      "Una lista detallada con cada commit, su autor, fecha y mensaje",
+      "Solo el último commit realizado",
+      "Un gráfico visual de las ramas del proyecto",
+      "Un archivo temporal generado automáticamente"
     ],
     correcta: 0
   },
-
   {
-    pregunta: "4. ¿Qué selector se usa para aplicar estilo a un único elemento con un identificador concreto?",
+    pregunta: "10. Modificas un archivo y quieres deshacer esos cambios sin borrar el archivo con git restore. ¿Qué pasará?(GIT)",
     respuestas: [
-      "Selector de clase",
-      "Selector de id",
-      "Selector de tipo",
-      "Selector de atributo"
+      "El archivo se borra",
+      "El archivo vuelve al estado del último commit",
+      "El archivo se mueve a staging",
+      "El archivo se convierte en untracked"
     ],
     correcta: 1
   },
-
   {
-   pregunta: "5. ¿Qué opción describe mejor el uso de class en este ejemplo?\n\n<p class=\"alerta advertencia-roja\">Peligro, esta acción no se puede deshacer.</p>\n\n.alerta {\n  border: 2px solid red;\n}\n\n.advertencia-roja {\n  color: red;\n}"
-,
+    pregunta: "11. Añadiste un archivo a staging por error. Lo quieres sacar sin perder los cambios (git restore). ¿Qué ocurrirá?(GIT)",
     respuestas: [
-      "Un elemento solo puede tener una clase",
-      "Un elemento puede tener varias clases separadas por espacios",
-      "Las clases solo se pueden usar en <p>",
-      "Las clases deben ser únicas en todo el documento"
+      "Se borran los cambios",
+      "El archivo vuelve a modified",
+      "El archivo se convierte en untracked",
+      "El archivo se borra del proyecto"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "6. ¿Qué selector aplica estilo solo a los enlaces dentro de un li?",
+    pregunta: "12. Creas una rama nueva y luego haces git branch. ¿Qué verás?(GIT)",
     respuestas: [
-      "Selector de hijo directo",
-      "Selector descendiente",
-      "Selector de id",
-      "Selector de clase"
+      "Solo la rama nueva",
+      "Todas las ramas locales y un asterisco en la actual",
+      "Solo la rama main",
+      "Un error porque no hay commits"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "7. ¿Qué selector selecciona solo los li que son hijos directos de un ul?",
+    pregunta: "13. Estás en la rama main y te mueves a otra rama con git checkout / switch. ¿Qué debería pasar en tu proyecto?(GIT)",
     respuestas: [
-      "ul li",
-      "ul + li",
-      "ul > li",
-      "ul ~ li"
+      "Se borran archivos",
+      "Cambian los archivos para coincidir con esa rama",
+      "Se mezclan ambas ramas automáticamente",
+      "No cambia nada"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "14. Creas una rama nueva y automáticamente quedas dentro de ella (git checkout -b). ¿Qué ha ocurrido?(GIT)",
+    respuestas: [
+      "Has creado una rama vacía sin moverte",
+      "Has creado una rama y te has movido a ella",
+      "Has eliminado la rama anterior",
+      "Has hecho un merge sin querer"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "15. Estás en la rama main y decides fusionar otra rama llamada 'login' (git merge login). ¿Qué resultado esperas?(GIT)",
+    respuestas: [
+      "Se borran los cambios de 'login'",
+      "Los cambios de 'login' se integran en main",
+      "Se crea una rama nueva",
+      "Se reinicia el historial"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "16. Intentas borrar una rama que aún tiene cambios no integrados (git branch -d). ¿Qué suele pasar?(GIT)",
+    respuestas: [
+      "Se borra sin avisar",
+      "Git te bloquea y te avisa del riesgo",
+      "Se hace merge automáticamente",
+      "Se borra el historial completo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "17. Quieres ver un árbol visual con todas las ramas y commits (git log --graph --oneline --all). ¿Qué deberías ver?(GIT)",
+    respuestas: [
+      "Un gráfico con líneas que representan ramas",
+      "Solo la rama actual",
+      "Un gráfico incorrecto",
+      "Un mensaje de error"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "18. Tienes un repositorio local y quieres vincularlo con uno remoto (git remote add origin). ¿Qué ocurre después de hacerlo?(GIT)",
+    respuestas: [
+      "Se suben automáticamente todos los commits",
+      "Tu repositorio local queda conectado a una URL remota",
+      "Se borra tu carpeta local",
+      "Se crea una rama nueva"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "19. Quieres comprobar a qué direcciones remotas apunta tu proyecto (git remote -v). ¿Qué deberías ver?(GIT)",
+    respuestas: [
+      "Solo la rama main",
+      "Una lista de URLs remotas configuradas",
+      "Un archivo de configuración",
+      "Un mensaje de error"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "20. Subes una rama por primera vez al remoto (git push -u origin). ¿Qué efecto tiene?(GIT)",
+    respuestas: [
+      "Se crea la rama en GitHub y queda vinculada para futuros pushes",
+      "Se borra la rama local",
+      "Se hace merge automático",
+      "Se reinicia el historial"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "21. Ya tienes una rama vinculada y haces push. ¿Qué ocurre?(GIT)",
+    respuestas: [
+      "Se suben tus commits nuevos",
+      "Se borra la rama remota",
+      "Se crea un fork",
+      "Se hace un pull automático"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "22. Descargas un repositorio existente desde GitHub mediante git clone. ¿Qué obtienes?(GIT)",
+    respuestas: [
+      "Solo la carpeta .git",
+      "El proyecto entero en una carpeta nueva",
+      "Solo la rama main",
+      "Un archivo ZIP vacío"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "23. Ejecutas git fetch para comprobar si hay cambios nuevos en el remoto sin modificar tu código local. ¿Qué ocurre?(GIT)",
+    respuestas: [
+      "Se mezclan los cambios automáticamente",
+      "Se descargan commits en la sombra sin modificar tu trabajo",
+      "Se borra tu rama actual",
+      "Se crea una rama nueva"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "24. Traes los cambios de tus compañeros y se integran en tu proyecto. ¿Qué pasa?(GIT)",
+    respuestas: [
+      "Se borran tus commits",
+      "Se mezclan los cambios (fast-forward o merge)",
+      "Se crea un fork",
+      "Se reinicia el repositorio"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "25. Quieres eliminar una rama remota para siempre (git push origin --delete). ¿Qué resultado esperas?(GIT)",
+    respuestas: [
+      "La rama desaparece del remoto",
+      "La rama se convierte en privada",
+      "La rama se mueve a staging",
+      "La rama se fusiona automáticamente"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "26. Haces un Fork de un proyecto. ¿Qué obtienes?(GIT)",
+    respuestas: [
+      "Una copia completa del proyecto bajo tu cuenta",
+      "Permisos para editar el proyecto original",
+      "Un archivo ZIP",
+      "Una rama nueva en el proyecto original"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "27. Creas un Pull Request. ¿Qué significa?(GIT)",
+    respuestas: [
+      "Estás pidiendo permiso para borrar una rama",
+      "Estás solicitando que tus cambios se revisen e integren",
+      "Estás creando un fork",
+      "Estás haciendo un merge automático"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "28. Tu fork está desactualizado respecto al proyecto original. Usas Sync Fork. ¿Qué ocurre?(GIT)",
+    respuestas: [
+      "Se borran tus commits",
+      "Tu fork se actualiza con los cambios del proyecto principal",
+      "Se crea un PR automático",
+      "Se reinicia tu repositorio"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "29. Estás haciendo un merge y Git consigue combinar automáticamente los cambios en un archivo sin conflicto. ¿Cómo quedará ese archivo?(GIT)",
+    respuestas: [
+      "Se marca como deleted y se borra",
+      "Se marca como untracked",
+      "Se considera merged correctamente y forma parte del nuevo commit",
+      "Se queda fuera del merge y no cambia"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "8. ¿Qué pseudo-clase se aplica cuando el ratón pasa por encima de un párrafo?",
+    pregunta: "30. Intentas fusionar la rama feature en main, pero ambos han modificado las mismas líneas de un archivo. ¿Qué ocurre?(GIT)",
     respuestas: [
-      ":active",
-      ":visited",
-      ":hover",
-      ":focus"
+      "El merge se hace igual y Git elige una versión al azar",
+      "Git muestra un error de conflicto y detiene el merge",
+      "Git borra el archivo para evitar problemas",
+      "Git crea una rama nueva automáticamente"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "31. Estás en medio de un merge y hay conflictos. ¿Cómo se soluciona?(GIT)",
+    respuestas: [
+      "Borrar el archivo con conflicto y hacer commit",
+      "Editar el archivo, elegir cambios, guardar, marcar como resuelto y hacer commit",
+      "Volver a hacer git init",
+      "Hacer otro merge sin tocar nada"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "32. Una API devuelve objetos enormes con muchos campos, pero el frontend solo usa 3. ¿Qué deberías hacer para mejorar el rendimiento?(OPTIMIZACION)",
+    respuestas: [
+      "Enviar todos los campos igualmente",
+      "Enviar solo los campos necesarios",
+      "Añadir más lógica al backend",
+      "Aumentar el tamaño del servidor"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "33. Una página tarda mucho en cargar porque hace 12 consultas iguales cada vez. ¿Qué deberías optimizar?(OPTIMIZACION)",
+    respuestas: [
+      "El diseño del HTML",
+      "La cantidad de comentarios en el código",
+      "Las consultas repetidas",
+      "El tamaño del repositorio"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "9. ¿Qué pseudo-clase selecciona el primer párrafo dentro de su contenedor?",
+    pregunta: "34. Cambias el código para que el total del carrito salga distinto “sin querer”. ¿Qué ha pasado?(OPTIMIZACION)",
     respuestas: [
-      ":first-child",
-      ":first-of-type",
-      ":nth-child(1)",
-      ":only-child"
+      "Has optimizado correctamente",
+      "Has cambiado el comportamiento del programa",
+      "Has reducido memoria",
+      "Has mejorado la red"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "10. ¿Qué propiedad controla el espacio entre líneas de texto?",
+    pregunta: "35. Un listado enorme se carga completo en memoria aunque solo se muestran 20 elementos. ¿Qué deberías hacer?(OPTIMIZACION)",
     respuestas: [
-      "letter-spacing",
-      "line-height",
-      "text-spacing",
-      "text-height"
+      "Paginar los datos",
+      "Aumentar la RAM",
+      "Añadir más logs",
+      "Repetir la consulta varias veces"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "36. Una función recorre una lista completa buscando un valor que suele aparecer al principio. ¿Qué mejora aplicarías?(OPTIMIZACION)",
+    respuestas: [
+      "Seguir recorriendo toda la lista siempre",
+      "Salir en cuanto encuentres el valor",
+      "Duplicar la lista",
+      "Guardar la lista en un archivo"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "11. ¿Qué propiedad elimina el subrayado de los enlaces?",
+    pregunta: "37. Una API tarda mucho porque devuelve imágenes, descripciones largas y datos que nadie usa. ¿Qué optimización aplicarías?(OPTIMIZACION)",
     respuestas: [
-      "text-style",
-      "decoration",
-      "text-decoration",
-      "underline:none"
+      "Reducir los campos enviados",
+      "Añadir más endpoints",
+      "Aumentar el número de hilos",
+      "Guardar todo en memoria"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "38. Una parte del sistema se ejecuta en cada petición y es muy lenta. ¿Qué deberías hacer primero?(OPTIMIZACION)",
+    respuestas: [
+      "Optimizar sin medir",
+      "Detectar dónde se pierde el tiempo",
+      "Cambiar toda la arquitectura",
+      "Añadir más clases"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "39. Tienes una lista de provincias que nunca cambia, pero la consultas en base de datos en cada petición. ¿Qué mejora aplicarías?(OPTIMIZACION)",
+    respuestas: [
+      "Guardarla en caché",
+      "Consultarla aún más veces",
+      "Enviarla por red en cada llamada",
+      "Guardarla en un archivo temporal"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "40. Una función lee un archivo varias veces sin necesidad. ¿Qué tipo de optimización es esta?(OPTIMIZACION)",
+    respuestas: [
+      "Global",
+      "Local",
+      "Dependiente de la máquina",
+      "Visual"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "41. Reduces el tamaño de las respuestas de una API y eliminas campos innecesarios. ¿Qué tipo de optimización es?(OPTIMIZACION)",
+    respuestas: [
+      "Dependiente de la máquina",
+      "Local",
+      "Independiente de la máquina",
+      "Visual"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "12. ¿Qué propiedad define el color de fondo de un elemento?",
+    pregunta: "42. Aumentas la memoria del servidor porque el proceso se queda corto. ¿Qué tipo de optimización es?(OPTIMIZACION)",
     respuestas: [
-      "color",
-      "background",
-      "background-color",
-      "bg-color"
-    ],
-    correcta: 2
-  },
-
-  {
-    pregunta: "13. ¿Qué hace background-image?",
-    respuestas: [
-      "Cambia el color del fondo de la imagen",
-      "Coloca una imagen como fondo del elemento",
-      "Inserta una imagen dentro del contenido",
-      "Cambia el borde del elemento"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "14. ¿Qué hace background-size en este ejemplo?\n\n.imagen-cover {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}"
-,
-    respuestas: [
-      "Ajusta la imagen para que se vea completa aunque queden huecos",
-      "Repite la imagen hasta llenar el contenedor",
-      "Escala la imagen para cubrir todo el contenedor aunque se recorte",
-      "Centra la imagen sin cambiar su tamaño"
-    ],
-    correcta: 2
-  },
-
-  {
-    pregunta: "15. ¿Qué hace background-size en este ejemplo?\n\n.imagen-contain {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-size: contain;\n}"
-,
-    respuestas: [
-      "La imagen cubre todo el contenedor aunque se recorte",
-      "La imagen se escala para ser completamente visible, aunque queden espacios vacíos",
-      "La imagen se repite en mosaico",
-      "La imagen se estira sin mantener proporciones"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "16. ¿Qué hace background-position aquí?\n\n.imagen-posicion {\n  background-image: url('imagenes/coliseo-roma.jpg');\n  background-repeat: no-repeat;\n  background-position: center;\n}"
-,
-    respuestas: [
-      "Coloca la imagen en la esquina superior izquierda",
-      "Centra la imagen horizontal y verticalmente",
-      "Repite la imagen en el centro",
-      "Mueve la imagen al fondo de la página"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "17. ¿Qué propiedad controla el grosor, estilo y color del borde en una sola línea?",
-    respuestas: [
-      "border-style",
-      "border-width",
-      "border-color",
-      "border"
+      "Independiente de la máquina",
+      "Local",
+      "Global",
+      "Dependiente de la máquina"
     ],
     correcta: 3
   },
-
   {
-    pregunta: "18. ¿Qué propiedad redondea las esquinas de una caja?",
+    pregunta: "43. Cambias cómo se cargan listados y reduces consultas en varias partes del sistema. ¿Qué tipo de optimización es?(OPTIMIZACION)",
     respuestas: [
-      "border-round",
-      "border-radius",
-      "corner-radius",
-      "round-corners"
+      "Local",
+      "Global",
+      "Visual",
+      "Temporal"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "19. ¿Qué unidad es relativa al tamaño de fuente del elemento raíz (html)?",
+    pregunta: "44. El servidor va lento solo cuando hay muchos usuarios simultáneos. ¿Qué deberías revisar primero?(OPTIMIZACION)",
     respuestas: [
-      "em",
-      "rem",
-      "px",
-      "%"
+      "El color del CSS",
+      "La cantidad de consultas",
+      "El tamaño del repositorio",
+      "Los comentarios del código"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "20. ¿Qué unidad representa un porcentaje del ancho de la ventana del navegador?",
+    pregunta: "45. Una función abre un recurso de lectura pero no lo cierra. ¿Qué estás optimizando si lo corriges?(OPTIMIZACION)",
     respuestas: [
-      "vh",
-      "vw",
-      "%",
-      "vmin"
+      "Nada, es solo estilo",
+      "Estabilidad y rendimiento local",
+      "El diseño del frontend",
+      "La red"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "21. ¿Qué valor de display hace que un elemento ocupe todo el ancho disponible y empiece en una nueva línea?",
+    pregunta: "46. Una API envía 5 MB de datos cuando solo se necesitan 50 KB. ¿Qué estás optimizando?(OPTIMIZACION)",
     respuestas: [
-      "inline",
-      "block",
-      "inline-block",
-      "flex"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "22. ¿Qué valor de display hace que el elemento fluya con el texto y no acepte width ni height?",
-    respuestas: [
-      "block",
-      "inline",
-      "flex",
-      "grid"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "23. ¿Qué valor de position es el valor por defecto (no se saca del flujo normal)?",
-    respuestas: [
-      "relative",
-      "absolute",
-      "fixed",
-      "static"
-    ],
-    correcta: 3
-  },
-
-  {
-    pregunta: "24. ¿Qué hace position: fixed?",
-    respuestas: [
-      "Se mueve con el scroll",
-      "Se posiciona respecto a su contenedor padre",
-      "Se queda fija respecto a la ventana, aunque hagas scroll",
-      "Desaparece del flujo y no se ve"
-    ],
-    correcta: 2
-  },
-
-  {
-    pregunta: "25. ¿Qué propiedad activa Flexbox en un contenedor?",
-    respuestas: [
-      "flex-direction",
-      "display:flex",
-      "flex:1",
-      "justify-content"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "26. ¿Qué hace justify-content: center?",
-    respuestas: [
-      "Centra los items verticalmente",
-      "Centra los items horizontalmente en el eje principal",
-      "Los pega a la izquierda",
-      "Los reparte con espacio entre ellos y los extremos"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "27. ¿Qué hace align-items: center?",
-    respuestas: [
-      "Alinea los items en el eje principal",
-      "Alinea los items en el eje cruzado (vertical por defecto)",
-      "Los distribuye con espacio entre ellos",
-      "Los manda al final del contenedor"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "28. En este ejemplo de box model, ¿qué propiedad define el espacio entre el contenido y el borde?\n\n.caja {\n  padding: 20px;\n  border: 1px solid #ccc;\n  margin: 10px;\n  gap: 20px;\n}"
-,
-    respuestas: [
-      "margin",
-      "padding",
-      "border",
-      "gap"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "29. En este ejemplo, ¿qué propiedad define el espacio entre la caja y otros elementos?\n\n.caja {\n  padding: 20px;\n  border: 1px solid #ccc;\n  margin: 10px;\n}"
-,
-    respuestas: [
-      "margin",
-      "padding",
-      "border",
-      "outline"
+      "La red",
+      "El disco",
+      "El CSS",
+      "El número de commits"
     ],
     correcta: 0
   },
-
   {
-    pregunta: "30. ¿Qué forma de conectar CSS con HTML se está usando aquí?\n\n<head>\n  <link rel=\"stylesheet\" href=\"estilos.css\">\n</head>"
-,
+    pregunta: "47. Tienes una variable llamada d que almacena el total de pedidos, pero nadie entiende qué significa. ¿Qué deberías aplicar?(REFACTORIZAR)",
     respuestas: [
-      "CSS interno",
-      "CSS externo",
-      "CSS en línea",
-      "CSS incrustado en el body"
+      "Extraer método",
+      "Renombrar variable",
+      "Extraer constante",
+      "Mover método"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "31. ¿Qué forma de conectar CSS con HTML se usa en este ejemplo?\n\n<head>\n  <style>\n    p { color: blue; }\n  </style>\n</head>"
-,
+    pregunta: "48. Un método de 120 líneas mezcla validación, cálculos y envío de emails. Es difícil de leer. ¿Qué patrón aplicarías primero?(REFACTORIZAR)",
     respuestas: [
-      "CSS externo",
-      "CSS interno",
-      "CSS en línea",
-      "CSS global"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "32. ¿Qué tipo de CSS se aplica aquí?\n\n<p style=\"font-size: 20px; color: red;\">Hola</p>"
-,
-    respuestas: [
-      "CSS interno",
-      "CSS externo",
-      "CSS en línea",
-      "CSS universal"
-    ],
-    correcta: 2
-  },
-
-  {
-    pregunta: "33. ¿Qué selector selecciona SOLO el primer hijo de un contenedor?",
-    respuestas: [
-      ":first-of-type",
-      ":first-child",
-      ":nth-child(1)",
-      ":only-child"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "34. ¿Qué selector selecciona SOLO el último párrafo dentro de un div?",
-    respuestas: [
-      "p:last-of-type",
-      "p:last-child",
-      "p:nth-last(1)",
-      "p:end"
+      "Extraer método",
+      "Extraer constante",
+      "Renombrar",
+      "Inline"
     ],
     correcta: 0
   },
-
   {
-    pregunta: "35. ¿Qué selector selecciona los párrafos pares?",
+    pregunta: "49. En varios controladores aparece copiado el mismo código para validar emails. ¿Qué deberías hacer?(REFACTORIZAR)",
     respuestas: [
-      "p:nth-child(even)",
-      "p:nth-child(odd)",
-      "p:first-child",
-      "p:last-child"
+      "Mover campo",
+      "Extraer constante",
+      "Sustituir duplicación (DRY)",
+      "Renombrar método"
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "50. Tienes un número '8' repetido en varios sitios para validar la longitud mínima de una contraseña. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    respuestas: [
+      "Extraer constante",
+      "Extraer método",
+      "Renombrar variable",
+      "Mover método"
     ],
     correcta: 0
   },
-
   {
-    pregunta: "36. ¿Qué selector selecciona los párrafos impares?",
+    pregunta: "51. Un controlador web contiene lógica de negocio, validaciones y acceso a base de datos. ¿Qué patrón aplicarías?(REFACTORIZAR)",
     respuestas: [
-      "p:nth-child(even)",
-      "p:nth-child(odd)",
-      "p:first-child",
-      "p:last-child"
+      "Extraer constante",
+      "Mover método",
+      "Renombrar variable",
+      "Sustituir duplicación"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "37. ¿Qué pseudo‑clase se activa cuando un checkbox está marcado?",
+    pregunta: "52. Una condición enorme con varios && y comprobaciones hace que el código sea difícil de entender. ¿Qué deberías hacer?(REFACTORIZAR)",
     respuestas: [
-      ":active",
-      ":focus",
-      ":checked",
-      ":selected"
+      "Extraer método que explique la condición",
+      "Extraer constante",
+      "Mover campo",
+      "Renombrar clase"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "53. Un método tiene un nombre como f() y nadie sabe qué hace. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    respuestas: [
+      "Extraer método",
+      "Renombrar método",
+      "Mover método",
+      "Extraer constante"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "54. Tienes un método que calcula el precio final, pero dentro también valida el email del usuario. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    respuestas: [
+      "Extraer constante",
+      "Extraer método",
+      "Sustituir duplicación",
+      "Mover campo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "55. Una clase tiene un campo que realmente pertenece a otra clase donde se usa siempre. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    respuestas: [
+      "Renombrar variable",
+      "Extraer método",
+      "Mover campo",
+      "Extraer constante"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "38. ¿Qué selector selecciona el primer párrafo del tipo <p> aunque no sea el primer hijo?",
+    pregunta: "56. Ves que dos métodos distintos tienen exactamente el mismo bloque de código para calcular un descuento. ¿Qué deberías hacer?(REFACTORIZAR)",
     respuestas: [
-      ":first-child",
-      ":first-of-type",
-      ":nth-child(1)",
-      ":only-of-type"
+      "Renombrar variable",
+      "Extraer método y reutilizarlo",
+      "Mover campo",
+      "Extraer constante"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "39. ¿Qué unidad depende del tamaño de fuente del elemento padre?",
+    pregunta: "57. Una condición compleja aparece en varios sitios. ¿Qué patrón aplicarías?(REFACTORIZAR)",
     respuestas: [
-      "px",
-      "rem",
-      "em",
-      "vh"
+      "Extraer método explicativo",
+      "Extraer constante",
+      "Mover método",
+      "Renombrar variable"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "58. Cambias el nombre de un método y el IDE actualiza todas las referencias automáticamente. ¿Qué patrón has aplicado?(REFACTORIZAR)",
+    respuestas: [
+      "Extract Method",
+      "Move Method",
+      "Rename",
+      "Inline"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "40. ¿Qué unidad ocupa un porcentaje del alto de la ventana?",
+    pregunta: "59. Un método tiene demasiadas responsabilidades: valida, calcula, guarda y envía emails. ¿Qué patrón aplicarías para empezar a dividirlo?(REFACTORIZAR)",
     respuestas: [
-      "vw",
-      "vh",
-      "vmin",
-      "vmax"
+      "Extraer constante",
+      "Extraer método",
+      "Mover campo",
+      "Renombrar variable"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "41. ¿Qué unidad usa el lado más corto del viewport?",
+    pregunta: "60. Un valor como 'ADMIN' aparece repetido en 10 sitios. ¿Qué patrón aplicarías?(REFACTORIZAR)",
     respuestas: [
-      "vmax",
-      "vmin",
-      "vh",
-      "vw"
+      "Extraer constante",
+      "Extraer método",
+      "Mover método",
+      "Sustituir duplicación"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "61. El controlador está lleno de lógica que debería estar en el servicio. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    respuestas: [
+      "Renombrar",
+      "Mover método",
+      "Extraer constante",
+      "Extraer método"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "42. ¿Qué unidad usa el lado más largo del viewport?",
+    pregunta: "62. Tienes un NullPointerException potencial porque haces rol.equals(\"ADMIN\") cuando rol puede ser null. ¿Qué detectaría un analizador?(ANALIZAR CODIGO)",
     respuestas: [
-      "vmin",
-      "vmax",
-      "vh",
-      "vw"
+      "Un problema de estilo",
+      "Un bug probable",
+      "Un import innecesario",
+      "Un método demasiado corto"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "43. ¿Qué valor de display oculta completamente un elemento?",
+    pregunta: "63. En tu código aparece una variable declarada pero nunca usada. ¿Qué avisaría un analizador estático?(ANALIZAR CODIGO)",
     respuestas: [
-      "block",
-      "inline",
-      "none",
-      "hidden"
+      "Código muerto o innecesario",
+      "Error de compilación",
+      "Problema de red",
+      "Problema de concurrencia"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "64. Un método tiene 120 líneas, muchos if anidados y es difícil de leer. ¿Qué avisaría un analizador?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Que falta un comentario",
+      "Que el método es demasiado largo o complejo",
+      "Que la clase debe ser final",
+      "Que el nombre del archivo es incorrecto"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "65. El analizador te marca que usas un número '8' repetido en varias validaciones. ¿Qué regla está señalando?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Evitar duplicación",
+      "Evitar números mágicos",
+      "Evitar imports estáticos",
+      "Evitar métodos privados"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "66. El IDE subraya una condición que siempre es falsa y nunca se ejecuta. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Estilo",
+      "Código muerto",
+      "Problema de red",
+      "Problema de concurrencia"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "67. Un analizador te avisa de que un método tiene demasiadas responsabilidades. ¿Qué está evaluando?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Rendimiento",
+      "Complejidad y mantenibilidad",
+      "Seguridad avanzada",
+      "Configuración del servidor"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "68. El analizador marca que una clase tiene imports que no se usan. ¿Qué tipo de aviso es?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Bug crítico",
+      "Estilo y convenciones",
+      "Problema de concurrencia",
+      "Problema de red"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "69. El IDE te muestra una bombilla con un 'quick fix' para renombrar una variable confusa. ¿Qué está haciendo?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Refactorización automática",
+      "Optimización de rendimiento",
+      "Compilación incremental",
+      "Ejecución de pruebas"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "70. El analizador detecta que un método nunca se llama desde ninguna parte del proyecto. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Código muerto",
+      "Problema de seguridad",
+      "Problema de concurrencia",
+      "Error de compilación"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "71. El equipo discute sobre estilo de código, pero el analizador ya tiene reglas configuradas. ¿Qué ventaja aporta?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Evita que el código compile",
+      "Evita discusiones porque las reglas son comunes",
+      "Aumenta el tamaño del proyecto",
+      "Reduce la RAM usada"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "72. Un analizador te avisa de que una condición es redundante porque ya se comprobó antes. ¿Qué está detectando?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Problema de red",
+      "Código innecesario",
+      "Error de compilación",
+      "Problema de seguridad"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "73. Configuras el analizador para ignorar la carpeta target/. ¿Qué estás haciendo?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Cambiando la lógica del programa",
+      "Ajustando exclusiones para evitar ruido",
+      "Eliminando código",
+      "Optimizando la red"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "74. El analizador te avisa de que un método tiene demasiados parámetros y es difícil de mantener. ¿Qué está midiendo?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Estilo visual",
+      "Complejidad",
+      "Seguridad",
+      "Rendimiento"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "75. Una herramienta como Checkstyle te marca que los nombres de métodos no siguen la convención. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Bug crítico",
+      "Estilo y consistencia",
+      "Problema de red",
+      "Problema de concurrencia"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "76. SpotBugs te avisa de que una comparación de cadenas puede fallar por null. ¿Qué tipo de aviso es?(ANALIZAR CODIGO)",
+    respuestas: [
+      "Estilo",
+      "Bug probable",
+      "Código muerto",
+      "Complejidad"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "77. Encuentras un comentario que dice // incrementa i justo encima de i++;. ¿Qué deberías hacer?(DOCUMENTACION)",
+    respuestas: [
+      "Mantenerlo porque explica el código",
+      "Borrarlo porque no aporta nada",
+      "Convertirlo en Javadoc",
+      "Añadir más comentarios similares"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "78. Un método público calcula el precio final y tiene reglas importantes de entrada (no acepta negativos). ¿Qué deberías usar?(DOCUMENTACION)",
+    respuestas: [
+      "Un comentario // calcula precio",
+      "Nada, el nombre ya basta",
+      "Javadoc con @param y @throws",
+      "Un comentario al final del archivo"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "44. ¿Qué valor de display permite aplicar width y height pero se comporta como inline?",
+    pregunta: "79. Un comentario explica “aplicamos IVA reducido por normativa”. ¿Qué tipo de comentario es?(DOCUMENTACION)",
     respuestas: [
-      "inline",
-      "block",
-      "inline-block",
-      "flex"
+      "Innecesario",
+      "Explica el porqué y aporta valor",
+      "Un comentario redundante",
+      "Un comentario mal formado"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "80. Un método privado muy simple tiene un Javadoc enorme. ¿Qué deberías hacer?(DOCUMENTACION)",
+    respuestas: [
+      "Mantenerlo",
+      "Ampliarlo aún más",
+      "Quitar el Javadoc y mejorar el nombre del método",
+      "Convertirlo en comentario de una línea"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "45. ¿Qué propiedad define la dirección de los elementos en flexbox?",
+    pregunta: "81. Un compañero pregunta por qué un método hace una validación extra rara. No está documentado. ¿Qué deberías añadir?(DOCUMENTACION)",
     respuestas: [
-      "justify-content",
-      "align-items",
-      "flex-direction",
-      "flex-wrap"
+      "Un comentario explicando el motivo",
+      "Un comentario explicando línea por línea",
+      "Un Javadoc con @deprecated",
+      "Nada, que lo deduzca del código"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "82. Ves un método público sin documentación y no queda claro qué devuelve. ¿Qué deberías hacer?(DOCUMENTACION)",
+    respuestas: [
+      "Añadir Javadoc con @return",
+      "Añadir un comentario // devuelve algo",
+      "Cambiar el nombre del método sin más",
+      "Eliminar el método"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "83. Un método lanza IllegalArgumentException si un parámetro es negativo, pero no está indicado en ningún sitio. ¿Qué falta?(DOCUMENTACION)",
+    respuestas: [
+      "Un comentario al final",
+      "Un @throws en el Javadoc",
+      "Un comentario TODO",
+      "Un import nuevo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "84. El proyecto tiene reglas de estilo y Javadoc configuradas para todo el equipo. ¿Qué ventaja aporta?(DOCUMENTACION)",
+    respuestas: [
+      "Evita que el código compile",
+      "Evita discusiones sobre estilo",
+      "Hace el código más lento",
+      "Elimina la necesidad de pruebas"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "85. Un comentario explica un caso especial que solo ocurre con usuarios bloqueados. ¿Qué tipo de comentario es?(DOCUMENTACION)",
+    respuestas: [
+      "Innecesario",
+      "Útil porque explica un edge case",
+      "Incorrecto porque no usa Javadoc",
+      "Debe eliminarse siempre"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "86. Generas Javadoc HTML desde IntelliJ y faltan clases. ¿Qué suele ser el problema?(DOCUMENTACION)",
+    respuestas: [
+      "El proyecto no compila",
+      "El Scope no incluye todo el proyecto",
+      "Falta un import",
+      "El código tiene demasiados comentarios"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "87. Un método público tiene parámetros con restricciones importantes (no null, rangos). ¿Qué deberías documentar?(DOCUMENTACION)",
+    respuestas: [
+      "Solo el nombre del método",
+      "Nada, se entiende",
+      "@param explicando las restricciones",
+      "Un comentario al final del archivo"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "46. ¿Qué propiedad permite que los elementos flex salten a otra línea?",
+    pregunta: "88. Ves un comentario que explica “esto está así por un bug del proveedor externo”. ¿Qué tipo de comentario es?(DOCUMENTACION)",
     respuestas: [
-      "wrap-items",
-      "flex-wrap",
-      "wrap-content",
-      "flex-direction"
+      "Innecesario",
+      "Explica una decisión importante",
+      "Un comentario redundante",
+      "Un comentario mal formado"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "47. ¿Qué propiedad controla el espacio entre los elementos flex?",
+    pregunta: "89. Un README explica cómo ejecutar el proyecto y cómo probarlo. ¿Qué parte de la documentación cubre?(DOCUMENTACION)",
     respuestas: [
-      "margin",
-      "padding",
-      "gap",
-      "spacing"
+      "Reglas de negocio",
+      "Puntos de entrada",
+      "Nivel proyecto",
+      "Decisiones raras"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "48. ¿Qué valor de position se pega arriba al hacer scroll?",
+    pregunta: "90. Deck y Card. Una baraja crea todas sus cartas al inicializarse. Las cartas existen como objetos independientes y pueden usarse en otros contextos. La baraja solo las mantiene para mezclarlas y repartirlas. Las cartas no dependen de la baraja para existir. ¿Qué relación es?",
     respuestas: [
-      "fixed",
-      "sticky",
-      "absolute",
-      "relative"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "49. ¿Qué valor de position se posiciona respecto al padre posicionado?",
-    respuestas: [
-      "static",
-      "absolute",
-      "fixed",
-      "sticky"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "50. ¿Qué valor de position se mueve respecto a su posición original?",
-    respuestas: [
-      "static",
-      "relative",
-      "absolute",
-      "fixed"
-    ],
-    correcta: 1
-  },
-
-  {
-    pregunta: "51. ¿Qué propiedad añade sombra a una tarjeta?",
-    respuestas: [
-      "shadow",
-      "border-shadow",
-      "box-shadow",
-      "drop-shadow"
+      "Composición",
+      "Agregación",
+      "Asociación",
+      "Realización"
     ],
     correcta: 2
   },
-
   {
-    pregunta: "52. ¿Qué propiedad define un borde decorativo en la izquierda?",
+    pregunta: "91. Player y Stats. Un jugador tiene un objeto Stats con vida y energía. Stats no depende del jugador para existir y podría asignarse a otro personaje. El jugador solo lo referencia. Ambos pueden existir por separado. ¿Qué relación es?",
     respuestas: [
-      "left-border",
-      "border-left",
-      "border-side",
-      "border-start"
+      "Composición",
+      "Asociación",
+      "Generalización",
+      "Dependencia"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "53. ¿Qué propiedad define el espacio interior de un elemento?",
+    pregunta: "92. Team y Champion. Un equipo está formado por varios campeones. Un campeón puede cambiar de equipo o no pertenecer a ninguno. Si el equipo desaparece, los campeones siguen existiendo. El equipo solo los agrupa. ¿Qué relación es?",
     respuestas: [
-      "margin",
-      "padding",
-      "border",
-      "gap"
+      "Composición",
+      "Agregación",
+      "Asociación",
+      "Realización"
     ],
     correcta: 1
   },
-
   {
-    pregunta: "54. ¿Qué propiedad define el espacio exterior de un elemento?",
+    pregunta: "93. Champion y Items. Un campeón puede tener varios objetos equipados. Los objetos pueden existir sin el campeón y moverse entre ellos. Si el campeón desaparece, los objetos no se destruyen. ¿Qué relación es?",
     respuestas: [
-      "padding",
-      "border",
-      "margin",
-      "outline"
+      "Composición",
+      "Agregación",
+      "Generalización",
+      "Dependencia"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "94. Champion y Ability. Un campeón tiene habilidades que solo existen para él. Si el campeón desaparece, las habilidades también desaparecen. No pueden existir por separado. ¿Qué relación es?",
+    respuestas: [
+      "Agregación",
+      "Composición",
+      "Asociación",
+      "Realización"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "95. Deck y su lista interna de cartas generadas. La baraja crea sus cartas internamente. No existen antes ni después de la baraja. Si la baraja se destruye, las cartas desaparecen. ¿Qué relación es?",
+    respuestas: [
+      "Asociación",
+      "Agregación",
+      "Composición",
+      "Generalización"
     ],
     correcta: 2
+  },
+  {
+    pregunta: "96. Ability, PassiveAbility y ActiveAbility. Ambas clases extienden Ability y comparten estructura pero implementan comportamiento distinto. ¿Qué relación es?",
+    respuestas: [
+      "Realización",
+      "Generalización",
+      "Agregación",
+      "Dependencia"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "97. Potion y HealthPotion. HealthPotion hereda de Potion y añade comportamiento específico. Es un tipo de Potion. ¿Qué relación es?",
+    respuestas: [
+      "Composición",
+      "Generalización",
+      "Realización",
+      "Asociación"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "98. Player implementa IManageHealth. La interfaz define métodos y Player los implementa. No hay código en la interfaz, solo contrato. ¿Qué relación es?",
+    respuestas: [
+      "Generalización",
+      "Realización",
+      "Agregación",
+      "Dependencia"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "99. ArrayList implementa List. List define el contrato y ArrayList lo cumple con implementación concreta. ¿Qué relación es?",
+    respuestas: [
+      "Realización",
+      "Composición",
+      "Asociación",
+      "Agregación"
+    ],
+    correcta: 0
   }
 ];
 
