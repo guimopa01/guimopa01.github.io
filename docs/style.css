@@ -28,6 +28,14 @@ body {
   padding: 80px 20px;
   text-align: center;
   overflow: hidden;
+  background: url("img/final.jfif") center/cover no-repeat;
+}
+
+.section-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
 }
 
 .hero::before {
