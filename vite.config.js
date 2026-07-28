@@ -1,3 +1,5 @@
+// trigger deploy
+
 import { defineConfig } from 'vite'
 
 // Single-page site. index.html at the root is the entry; birthday.css and
