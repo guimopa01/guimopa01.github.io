@@ -465,3 +465,50 @@ body{
   .wish.is-in .wish__heroWrap::before{ animation:none; opacity:.9; }
   .wish.is-in .wish__heroWrap::after{ animation:none; opacity:0; }
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 70%;
+  max-width: 900px;
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-text {
+  flex: 1;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.modal-img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.modal-close {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
