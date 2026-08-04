@@ -869,6 +869,19 @@ function enter(){
     .to(hint,     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.7);
 }
 
+function showInfoButton(){
+  const btn = document.getElementById('openModal');
+  btn.hidden = false;
+  btn.classList.add('is-shown');
+}
+
+const checkDone = setInterval(() => {
+  if (window.bdayDone) {
+    clearInterval(checkDone);
+    showInfoButton();   // aquí aparece tu botón INFO
+  }
+}, 200);
+
 function armReplay(){
   replay.hidden = false;
   requestAnimationFrame(() => replay.classList.add('is-shown'));
@@ -880,6 +893,7 @@ function resetAll(){
   showWish(false);
   window.bdayDone = false; replayArmed = false;
   replay.classList.remove('is-shown'); replay.hidden = true;
+  openModal.classList.remove('is-shown'); openModal.hidden = true; 
   if (filmTL){ filmTL.pause(0); }
   gsap.set([flood, bloom], { autoAlpha: 0 });
   gsap.set(field, { autoAlpha: 0 });
