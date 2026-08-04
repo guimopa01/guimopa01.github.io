@@ -512,3 +512,19 @@ body{
   cursor: pointer;
   color: white;
 }
+
+@media (max-width: 600px){
+  .modal-body{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-img{
+    width: 70%;
+    max-width: 220px;
+  }
+
+  .modal-text{
+    font-size: 1.1rem;
+  }
+}
