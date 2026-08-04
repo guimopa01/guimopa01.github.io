@@ -945,3 +945,15 @@ if (isRecord){
     replay(){ resetAll(); },
   };
 }
+
+const modal = document.getElementById('modal');
+const closeModal = document.getElementById('closeModal');
+const openModalBtn = document.getElementById('openModal');
+
+openModalBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
