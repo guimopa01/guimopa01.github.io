@@ -439,6 +439,23 @@ body{
 .replay:hover{ background:rgba(255,252,248,.92); }
 .replay svg{ opacity:.8; }
 
+.regalo{
+  position:absolute; right:20px; bottom:70px; z-index:7;
+  display:inline-flex; align-items:center; gap:7px;
+  padding:9px 15px 9px 12px; border-radius:999px;
+  font:600 12.5px/1 "Cormorant Garamond", Georgia, serif; letter-spacing:.12em; text-transform:uppercase;
+  color:#8a4a5a; background:rgba(255,248,242,.72);
+  border:1px solid rgba(150,60,80,.18);
+  box-shadow:0 6px 20px -8px rgba(120,20,50,.4);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  cursor:pointer; opacity:0; transform:translateY(8px);
+  transition:opacity .5s ease, transform .5s var(--ease-out), background .3s ease;
+}
+.regalo.is-shown{ opacity:1; transform:translateY(0); }
+.regalo:hover{ background:rgba(255,252,248,.92); }
+.regalo svg{ opacity:.8; }
+
+
 /* ============================================================
    THE LENS — grain + vignette over every act
    ============================================================ */
