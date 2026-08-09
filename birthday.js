@@ -957,3 +957,17 @@ openModalBtn.addEventListener('click', () => {
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+
+
+const modalImg = document.querySelector('.modal-img');
+const imgZoom = document.getElementById('imgZoom');
+const zoomedImg = document.getElementById('zoomedImg');
+
+modalImg.addEventListener('click', () => {
+  zoomedImg.src = modalImg.src;
+  imgZoom.style.display = 'flex';
+});
+
+imgZoom.addEventListener('click', () => {
+  imgZoom.style.display = 'none';
+});
